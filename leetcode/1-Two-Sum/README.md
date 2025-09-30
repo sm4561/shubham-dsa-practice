@@ -4,14 +4,14 @@ Two Sum (LeetCode #1) ✅
 #Problem Statement:-
 Given an array of integers nums and an integer target, return the indices of the two numbers such that they add up to the target.
 
-*Key Assumptions:-
+#Key Assumptions:-
 
   -There is exactly one valid answer.
   -You cannot use the same element twice.
 
 You can return the answer in any order.
 
-*Examples*
+Examples
 Example 1:
 
 Input: nums = [2,7,11,15], target = 9
