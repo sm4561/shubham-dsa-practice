@@ -53,4 +53,4 @@ Space Complexity: O(n)
 ## Solution
   See [`Solution.java`](Solution.java) for the Java implementation (LeetCode submission version, without main class).
 
-  See Main.java for a runnable version with test cases (for local testing in VS Code).
+  See [`main.java`](main.java) for a runnable version with test cases (for local testing in VS Code).
