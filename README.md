@@ -1,58 +1,37 @@
-Shubham's Data Structures & Algorithms Practice
-Welcome to my DSA repository! This project serves as a personal log of my journey to master Data Structures and Algorithms. The solutions here are my own work, developed as part of my daily practice to strengthen my problem-solving skills and deepen my understanding of core computer science concepts.
+Shubham's DSA Practice
+Welcome! This repository is my dedicated space for practicing Data Structures and Algorithms to build a strong foundation for my career as a Java Full Stack Developer. It contains my solutions to problems from various competitive programming platforms.
 
-My primary language for solving these problems is Java, aligning with my career goal of becoming a proficient Java Full Stack Developer.
+About This Repository
+🎯 Goal: To consistently solve problems, improve my logic, and master core computer science concepts.
 
-🎯 Purpose
-The main goals of this repository are:
+📚 Language: All solutions are written in Java.
 
-Consistent Practice: To solve coding problems regularly from various platforms.
+✨ Quality: I focus on writing clean, efficient, and well-documented code.
 
-Learning & Review: To create a personal knowledge base that I can revisit to reinforce concepts.
+Coding Platforms
+You can view my profiles and track my progress on the following platforms.
 
-Showcase Skills: To demonstrate my problem-solving abilities and my proficiency in Java.
+(Just replace your-username with your actual username/ID in each link below)
 
-Code Quality: To practice writing clean, efficient, and well-documented code.
+LeetCode: https://leetcode.com/your-username/
 
-📂 Repository Structure
-This repository is organized by the coding platform where the problem originated. Each problem is contained within its own named folder, which includes:
+HackerRank: https://www.hackerrank.com/profile/your-username
 
-A README.md file with the problem description, constraints, and examples.
+GeeksforGeeks: https://auth.geeksforgeeks.org/user/your-username
 
-The Solution.java file containing my code.
+How It's Organized
+The repository is structured by platform to keep things clean and easy to navigate. Each problem has its own folder containing the problem description and my solution.
 
 shubham-dsa-practice/
-|
-+-- leetcode/
-|   +-- 1-Two-Sum/
-|   |   +-- README.md        // Problem Description
-|   |   +-- Solution.java    // My Java Solution
-|   +-- ...
-|
-+-- hackerrank/
-|   +-- ...
-|
-+-- geeksforgeeks/
-|   +-- ...
-|
-+-- README.md                // You are here!
+├── leetcode/
+│   └── 1-Two-Sum/
+│       ├── README.md       (The problem description)
+│       └── Solution.java   (My Java code)
+│
+├── hackerrank/
+│   └── ...
+│
+└── geeksforgeeks/
+    └── ...
 
-💻 Platforms
-I am actively solving problems from the following platforms to ensure exposure to a wide variety of challenges.
-
-Here is where you add your links: Replace the placeholder URLs inside the parentheses () with your actual profile links.
-
-LeetCode
-
-HackerRank
-
-GeeksforGeeks
-
-🛠️ Tech Stack
-Language: Java (JDK 23+)
-
-IDE: Visual Studio Code
-
-Version Control: Git & GitHub
-
-Thank you for visiting my repository!
+Thank you for visiting!
