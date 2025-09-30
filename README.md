@@ -16,7 +16,7 @@ It contains my solutions to problems from various competitive programming platfo
 ## 🌐 Coding Profiles
 You can track my progress on the following platforms:  
 
-- [LeetCode](https://leetcode.com/your-username/)  
+- [LeetCode](https://leetcode.com/u/sm547986/)  
 - [HackerRank](https://www.hackerrank.com/profile/your-username)  
 - [GeeksforGeeks](https://auth.geeksforgeeks.org/user/your-username)  
 
