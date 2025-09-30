@@ -64,3 +64,5 @@ Here is the step-by-step logic:
 
 You can view the code for my solution here:
 [`Solution.java`](Solution.java)
+
+See [`main.java`](main.java) for a runnable version with test cases (for local testing in VS Code).
