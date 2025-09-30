@@ -22,31 +22,31 @@ A README.md file with the problem description, constraints, and examples.
 The Solution.java file containing my code.
 
 shubham-dsa-practice/
-│
-├── 📁 leetcode/
-│   ├── 📁 1-Two-Sum/
-│   │   ├── 📄 README.md         // Problem Description
-│   │   └── 📄 Solution.java      // My Java Solution
-│   └── ...
-│
-├── 📁 hackerrank/
-│   └── ...
-│
-├── 📁 geeksforgeeks/
-│   └── ...
-│
-└── 📄 README.md                 // You are here!
+|
++-- leetcode/
+|   +-- 1-Two-Sum/
+|   |   +-- README.md        // Problem Description
+|   |   +-- Solution.java    // My Java Solution
+|   +-- ...
+|
++-- hackerrank/
+|   +-- ...
+|
++-- geeksforgeeks/
+|   +-- ...
+|
++-- README.md                // You are here!
 
 💻 Platforms
-I am actively solving problems from the following platforms to ensure exposure to a wide variety of challenges:
+I am actively solving problems from the following platforms to ensure exposure to a wide variety of challenges.
+
+Here is where you add your links: Replace the placeholder URLs inside the parentheses () with your actual profile links.
 
 LeetCode
 
 HackerRank
 
 GeeksforGeeks
-
-(Feel free to replace your-username with your actual profile links!)
 
 🛠️ Tech Stack
 Language: Java (JDK 23+)
