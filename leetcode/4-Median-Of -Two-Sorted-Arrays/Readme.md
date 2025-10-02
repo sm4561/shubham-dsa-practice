@@ -1,52 +1,66 @@
-Median of Two Sorted Arrays (LeetCode #4) ✅
+# Median of Two Sorted Arrays (LeetCode #4) ✅
+[Link to Problem on LeetCode](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
-Link to Problem on LeetCode
+---
 
-Problem Statement:-
+## Problem Statement:-
+Given two sorted arrays `nums1` and `nums2` of size `m` and `n` respectively, return the **median** of the two sorted arrays.
 
-Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+The overall run time complexity should be **O(log (m+n))**.
 
-The overall run time complexity should be O(log (m+n)).
+---
 
-Key Assumptions:
-Arrays are already sorted in non-decreasing order.
-One or both arrays may be empty, but total length m + n ≥ 1.
-Range of elements: -10^6 <= nums1[i], nums2[i] <= 10^6.
-Examples:-
+## Key Assumptions:
+- Arrays are already sorted in **non-decreasing order**.
+- One or both arrays may be empty, but total length `m + n ≥ 1`.
+- Range of elements: `-10^6 <= nums1[i], nums2[i] <= 10^6`.
 
-Example 1:
+---
 
-Input: nums1 = [1,3], nums2 = [2]
-Output: 2.00000
-Explanation: merged array = [1,2,3], median = 2.
+## Examples:-
 
-Example 2:
+**Example 1:**
 
-Input: nums1 = [1,2], nums2 = [3,4]
-Output: 2.50000
-Explanation: merged array = [1,2,3,4], median = (2+3)/2 = 2.5.
+Input: nums1 = [1,3], nums2 = [2]  
+Output: 2.00000  
 
-My Approach & Thought Process:-
+Explanation: merged array = [1,2,3] and median is 2.
 
-A brute force approach would be to merge both arrays and then directly pick the middle element(s).
-This would take O(m+n) time, which is not optimal.
+---
 
-To achieve O(log(min(m,n))), we use Binary Search Partitioning:
+**Example 2:**
 
-Always apply binary search on the smaller array (let’s assume nums1).
-Partition both arrays into left and right halves so that:
-All elements in the left halves are ≤ all elements in the right halves.
-The total number of elements in the left half = (m+n+1)/2.
-Use binary search to adjust the partition index until the correct split is found.
-Median is determined by:
-If total length is odd → max(left1, left2)
-If even → (max(left1, left2) + min(right1, right2)) / 2.
+Input: nums1 = [1,2], nums2 = [3,4]  
+Output: 2.50000  
 
-This guarantees O(log(min(m,n))) time and O(1) space.
+Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
 
-Time & Space Complexity:
-Time Complexity: O(log(min(m,n)))
-Space Complexity: O(1)
-Solution
+---
 
-See Solution.java for the Java implementation (LeetCode submission version, without main class).
+## My Approach & Thought Process:-
+
+- My first instinct was to merge both arrays and then find the middle element(s).  
+  But this brute force approach would be **O(m+n)**, which is too slow for large inputs.
+
+- The key challenge is to meet the **O(log(min(m,n)))** complexity requirement.
+
+- A better approach is to use **Binary Search on partitions**:
+  - Always binary search on the smaller array.
+  - Partition both arrays such that:
+    - Left half contains `(m+n+1)/2` elements.
+    - All left-half elements ≤ all right-half elements.
+  - Compute the median based on whether total length is odd or even.
+
+---
+
+## Time & Space Complexity:
+
+- **Time Complexity:** O(log(min(m,n)))
+-  
+- **Space Complexity:** O(1)
+
+---
+
+## Solution
+
+See [`Solution.java`](Solution.java) for the Java implementation (LeetCode submission version, without main class).
