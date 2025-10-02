@@ -56,7 +56,6 @@ Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
 ## Time & Space Complexity:
 
 - **Time Complexity:** O(log(min(m,n)))
--  
 - **Space Complexity:** O(1)
 
 ---
