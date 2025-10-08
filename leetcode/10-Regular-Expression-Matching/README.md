@@ -2,11 +2,11 @@ Regular Expression Matching (LeetCode #10) ✅
 Link to Problem on LeetCode
 
 Problem Statement:-
-Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*'.
+Given an input string s and a pattern p, implement regular expression matching with support for . and *.
 
-'.' Matches any single character.
+. Matches any single character.
 
-'*' Matches zero or more of the preceding element.
+* Matches zero or more of the preceding element.
 
 The matching should cover the entire input string (not partial).
 
@@ -38,7 +38,7 @@ Explanation: ".*" means "zero or more (*) of any character (.)".
 My Approach & Thought Process:-
 This problem has optimal substructure and overlapping subproblems, making it a classic Dynamic Programming (DP) problem.
 
-I'll use a 2D DP table, let's call it dp[i][j], which will be true if the first i characters of s match the first j characters of p, and false otherwise.
+I'll use a 2D DP table, dp[i][j], which will be true if the first i characters of s match the first j characters of p.
 
 Base Case: dp[0][0] = true, since an empty string matches an empty pattern.
 
@@ -46,20 +46,27 @@ Transitions (Filling the table):
 
 If p[j-1] is a *:
 
-The * can act as "zero" of the preceding element. In this case, the match depends on the pattern excluding the * and its preceding character (dp[i][j-2]).
+It can act as "zero" of the preceding element (dp[i][j-2]).
 
-Or, if the current character s[i-1] matches the character before the * in p, the * can act as "one or more" of the preceding element. The match then depends on the previous state for the string (dp[i-1][j]).
+Or, if the current character s[i-1] matches the character before *, it can act as "one or more" (dp[i-1][j]).
 
 If p[j-1] is . or a letter:
 
-A match occurs only if the current characters s[i-1] and p[j-1] match, AND the rest of the substrings also matched (dp[i-1][j-1]).
+A match occurs only if s[i-1] matches p[j-1] AND the rest of the substrings also matched (dp[i-1][j-1]).
 
 The final answer is the value in dp[s.length()][p.length()].
 
 Time & Space Complexity:
-Time Complexity: O(m×n) — where m is the length of string s and n is the length of pattern p. We have to fill every cell of the DP table.
+Time Complexity: O(m * n) — where m is the length of s and n is the length of p.
 
-Space Complexity: O(m×n) — to store the DP table.
+Space Complexity: O(m * n) — for the DP table.
 
 Solution
 See Solution.java for the Java implementation (LeetCode submission version, without main class).
+
+
+
+
+
+
+
