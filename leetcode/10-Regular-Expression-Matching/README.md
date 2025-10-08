@@ -1,22 +1,24 @@
+:::writing{id="14729", title="README for LeetCode 10: Regular Expression Matching", variant="standard"}
+
 Regular Expression Matching (LeetCode #10) ✅
 
 Link to Problem on LeetCode
 
 Problem Statement:-
 
-Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*', where:
+Implement regular expression matching between a string s and a pattern p, where:
 
 '.' → Matches any single character.
 
-'*' → Matches zero or more of the preceding element.
+'*' → Matches zero or more occurrences of the preceding element.
 
-The matching must cover the entire input string (not partial).
+Matching must cover the entire string, not just a substring.
 
 Key Assumptions:
 
-Every '*' will always have a valid preceding character.
+Each '*' in the pattern will always have a valid preceding character.
 
-The input string and pattern only contain lowercase English letters, '.', and '*'.
+The pattern and string only contain lowercase English letters, '.', and '*'.
 
 Input lengths:
 
@@ -32,12 +34,14 @@ Input: s = "aa", p = "a"
 Output: false
 Explanation: "a" does not match the entire string "aa".
 
+
 Example 2:
 
 Input: s = "aa", p = "a*"
 Output: true
 Explanation: '*' means zero or more of the preceding element ('a'). 
 By repeating 'a' once, it becomes "aa".
+
 
 Example 3:
 
@@ -47,23 +51,30 @@ Explanation: ".*" means "zero or more (*) of any character (.)".
 
 My Approach & Thought Process:-
 
-Use Dynamic Programming (DP) to compare characters of s and p.
+This is a Dynamic Programming (DP) problem.
 
-Consider two main cases:
+Let dp[i][j] represent whether s[0..i-1] matches p[0..j-1].
 
-Direct or '.' match: Compare previous characters.
+Base case: dp[0][0] = true (empty string matches empty pattern).
 
-'*' match: Check zero or multiple occurrences of the preceding element.
+For '*' cases:
 
-Start with base case dp[0][0] = true (empty string vs empty pattern).
+'*' can eliminate the previous character → dp[i][j] = dp[i][j-2]
+
+Or it can match multiple occurrences if previous characters match →
+dp[i][j] = dp[i-1][j] && (s[i-1] == p[j-2] || p[j-2] == '.')
+
+For normal or '.' characters:
+dp[i][j] = dp[i-1][j-1] && (s[i-1] == p[j-1] || p[j-1] == '.')
 
 Time & Space Complexity:
 
 Time Complexity: O(m × n), where m = length of s, n = length of p.
 
-Space Complexity: O(m × n)
+Space Complexity: O(m × n) for the DP table.
 
 Solution
 
 See Solution.java
  for the Java implementation (LeetCode submission version, without main class).
+:::
