@@ -40,7 +40,9 @@ Converting a decimal place value into a Roman numeral follows these **rules**:
 **Example 1:**
 
 Input: num = 3749
+
 Output: "MMMDCCXLIX"
+
 Explanation:
 3000 = MMM (M + M + M)
 
@@ -54,7 +56,9 @@ Explanation:
 **Example 2:**
 
 Input: num = 58
+
 Output: "LVIII"
+
 Explanation:
 50 = L
 8 = VIII
@@ -63,11 +67,16 @@ Explanation:
 **Example 3:**
 
 Input: num = 1994
+
 Output: "MCMXCIV"
+
 Explanation:
 1000 = M
+
 900 = CM
+
 90 = XC
+
 4 = IV
 
 
