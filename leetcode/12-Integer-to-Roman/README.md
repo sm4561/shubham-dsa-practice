@@ -1,4 +1,4 @@
-# Integer to Roman (LeetCode #12) 🟡
+# Integer to Roman (LeetCode #12) ✅
 
 [Link to Problem on LeetCode](https://leetcode.com/problems/integer-to-roman/)
 
