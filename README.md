@@ -30,14 +30,19 @@ Each problem has its own folder containing the **problem description** and my **
 shubham-dsa-practice/
 │
 ├── leetcode/
+
 │ └── 1-Two-Sum/
+
 │ ├── README.md # Problem description
+
 │ └── Solution.java
 │
 ├── hackerrank/
+
 │ └── ...
 │
 └── geeksforgeeks/
+
 └── ...
 
 ---
