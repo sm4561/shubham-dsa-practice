@@ -23,26 +23,26 @@ You can track my progress on the following platforms:
 
 ---
 
-## 📂 Repository Structure
-The repository is organized by **platform** to keep everything clean and easy to navigate.  
+## 📁 Repository Structure
+
+The repository is organized by **platform** to keep everything clean and easy to navigate.
 Each problem has its own folder containing the **problem description** and my **Java solution**.
 
+```
 shubham-dsa-practice/
-│
 ├── leetcode/
-│ ├── 1-Two-Sum/
-│ │ ├── README.md # Problem description
-│ │ └── Solution.java # Java solution
-│ ├── 9-Palindrome-Number/
-│ │ ├── README.md
-│ │ └── Solution.java
-│ └── ...
-│
+│   ├── 1-Two-Sum/
+│   │   ├── README.md         # Problem description
+│   │   └── Solution.java     # Java solution
+│   ├── 9-Palindrome-Number/
+│   │   ├── README.md
+│   │   └── Solution.java
+│   └── ...
 ├── hackerrank/
-│ ├── ...
-│
+│   └── ...
 └── geeksforgeeks/
-├── ...
+    └── ...
+```
 
 ## 🙌 Thank You
 Thanks for visiting this repository!  
