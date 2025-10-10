@@ -30,22 +30,19 @@ Each problem has its own folder containing the **problem description** and my **
 shubham-dsa-practice/
 │
 ├── leetcode/
-
-│ └── 1-Two-Sum/
-
-│      ├── README.md # Problem description
-
-│ └── Solution.java
-│
-├── hackerrank/
-
+│ ├── 1-Two-Sum/
+│ │ ├── README.md # Problem description
+│ │ └── Solution.java # Java solution
+│ ├── 9-Palindrome-Number/
+│ │ ├── README.md
+│ │ └── Solution.java
 │ └── ...
 │
+├── hackerrank/
+│ ├── ...
+│
 └── geeksforgeeks/
-
-└── ...
-
----
+├── ...
 
 ## 🙌 Thank You
 Thanks for visiting this repository!  
