@@ -1,4 +1,4 @@
-# Longest Common Prefix (LeetCode #14) 
+# Longest Common Prefix (LeetCode #14) ✅
 
 [Link to Problem on LeetCode](https://leetcode.com/problems/longest-common-prefix/)
 
