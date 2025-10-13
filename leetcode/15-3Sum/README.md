@@ -1,4 +1,4 @@
-# 3Sum (LeetCode #15) 🟠
+# 3Sum (LeetCode #15) ✅
 
 [Link to Problem on LeetCode](https://leetcode.com/problems/3sum/)
 
