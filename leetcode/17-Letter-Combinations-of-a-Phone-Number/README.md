@@ -1,4 +1,4 @@
-# Letter Combinations of a Phone Number (LeetCode #17) 
+# Letter Combinations of a Phone Number (LeetCode #17) ✅
 
 [Link to Problem on LeetCode](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
 
