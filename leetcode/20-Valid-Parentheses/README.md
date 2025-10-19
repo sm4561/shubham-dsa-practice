@@ -1,108 +1,111 @@
-Here’s the complete README.md file for LeetCode #20 – Valid Parentheses ✅
+# Valid Parentheses (LeetCode #20) ✅
 
-Valid Parentheses (LeetCode #20) ✅
+[Link to Problem on LeetCode](https://leetcode.com/problems/valid-parentheses/)
 
-Link to Problem on LeetCode
+---
 
-Problem Statement:
+## Problem Statement:
 
-Given a string s containing only the characters '(', ')', '{', '}', '[', and ']', determine whether the input string is valid.
+Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is **valid**.
 
-A string is valid if:
+An input string is valid if:
 
-Open brackets must be closed by the same type of brackets.
+1. Open brackets must be closed by the same type of brackets.  
+2. Open brackets must be closed in the correct order.  
+3. Every close bracket has a corresponding open bracket of the same type.
 
-Open brackets must be closed in the correct order.
+---
 
-Every closing bracket has a corresponding open bracket of the same type.
+## Example 1:
 
-Examples:
+**Input:**  
+`s = "()"`
 
-Example 1:
+**Output:**  
+`true`
 
-Input:
-s = "()"
+---
 
-Output:
-true
+## Example 2:
 
-Example 2:
+**Input:**  
+`s = "()[]{}"`
 
-Input:
-s = "()[]{}"
+**Output:**  
+`true`
 
-Output:
-true
+---
 
-Example 3:
+## Example 3:
 
-Input:
-s = "(]"
+**Input:**  
+`s = "(]"`
 
-Output:
-false
+**Output:**  
+`false`
 
-Example 4:
+---
 
-Input:
-s = "([])"
+## Example 4:
 
-Output:
-true
+**Input:**  
+`s = "([])"`
 
-Example 5:
+**Output:**  
+`true`
 
-Input:
-s = "([)]"
+---
 
-Output:
-false
+## Example 5:
 
-Key Assumptions & Constraints:
+**Input:**  
+`s = "([)]"`
 
-1 <= s.length <= 10⁴
+**Output:**  
+`false`
 
-s consists only of characters: '(', ')', '{', '}', '[', ']'
+---
 
-Approach & Thought Process:
-Using Stack (LIFO structure)
+## Constraints:
 
-Create a stack to store opening brackets.
+* `1 <= s.length <= 10^4`  
+* `s` consists of parentheses only `'()[]{}'`.
 
-Traverse the string:
+---
 
-If the character is an opening bracket ((, {, [), push it onto the stack.
+## Approach & Thought Process:
 
-If it’s a closing bracket, check:
+* Use a **stack** to keep track of open brackets:
+  1. Iterate over each character in the string.  
+  2. If it is an **opening bracket** `(`, `[`, `{`, push it onto the stack.  
+  3. If it is a **closing bracket** `)`, `]`, `}`, check the top of the stack:
+     - If the top matches the corresponding opening bracket, pop it.  
+     - Otherwise, return `false`.  
+  4. After processing all characters, if the stack is empty, the string is valid. Otherwise, it is invalid.
 
-Stack must not be empty.
+---
 
-The top of the stack must be the matching opening bracket.
+## Example Walkthrough:
 
-If not, the string is invalid → return false.
+For input `s = "([{}])"`:
 
-At the end, if the stack is empty, the string is valid; otherwise, it’s invalid.
+* Step 1 → Push `'('` → Stack: `['(']`  
+* Step 2 → Push `'['` → Stack: `['(', '[']`  
+* Step 3 → Push `'{'` → Stack: `['(', '[', '{']`  
+* Step 4 → Encounter `'}'` → Matches top `'{'` → Pop → Stack: `['(', '[']`  
+* Step 5 → Encounter `']'` → Matches top `'['` → Pop → Stack: `['(']`  
+* Step 6 → Encounter `')'` → Matches top `'('` → Pop → Stack: `[]`  
+* Result → Stack empty → `true`
 
-Example Walkthrough:
+---
 
-Input: "([])"
+## Time & Space Complexity:
 
-Push '(' → Stack: ['(']
+* **Time Complexity:** O(N) — traverse the string once.  
+* **Space Complexity:** O(N) — in worst case, stack holds all opening brackets.
 
-Push '[' → Stack: ['(', '[']
+---
 
-Encounter ']' → matches '[', pop → Stack: ['(']
+## Solution
 
-Encounter ')' → matches '(', pop → Stack: []
-✅ Stack empty → valid.
-
-Time & Space Complexity:
-
-Time Complexity: O(n) – Each character is processed once.
-
-Space Complexity: O(n) – Stack can hold all opening brackets in the worst case.
-
-Solution
-
-See Solution.java
- for the Java implementation (LeetCode submission version, without main class).
+See [`Solution.java`](Solution.java) for the Java implementation (LeetCode submission version, without main class).  
