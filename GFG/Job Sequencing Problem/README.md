@@ -1,18 +1,26 @@
 # Job Sequencing Problem (GFG) ✅
 
-[Link to Problem on GFG](https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1)
+[Link to Problem on GFG](https://www.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1)
 
 ---
 
 ## Problem Statement:
 
-You are given two arrays: `deadline[]` and `profit[]`, which represent a set of jobs. Each job takes **1 unit of time** to complete, and only **one job can be scheduled at a time**. You will earn the profit associated with a job **only if it is completed by its deadline**.
+You are given two arrays: `deadline[]` and `profit[]`, each representing a job.  
+Each job takes **1 unit of time**, and only **one job can be scheduled at a time**.
 
-Your task is to find:
-* The maximum number of jobs that can be completed within their deadlines.
-* The total maximum profit earned by completing those jobs.
+You earn the profit of a job **only if it is completed on or before its deadline**.
 
-Return the result as an array or pair: `[maxJobs, totalProfit]`.
+Your task is to return:
+
+* The **maximum number of jobs** that can be completed.
+* The **maximum total profit** earned.
+
+The answer should be returned as:
+
+```
+[maxJobs, maxProfit]
+```
 
 ---
 
@@ -22,13 +30,13 @@ Return the result as an array or pair: `[maxJobs, totalProfit]`.
 
 Input:  
 deadline = [4, 1, 1, 1]  
-profit = [20, 10, 40, 30]  
+profit   = [20, 10, 40, 30]
 
 Output:  
 [2, 60]
 
 Explanation:  
-Choose job with profit 40 (deadline 1) and job with profit 20 (deadline 4). Total jobs = 2, total profit = 60.
+Select jobs with profits 40 and 20 → total = 60.
 
 ---
 
@@ -36,13 +44,13 @@ Choose job with profit 40 (deadline 1) and job with profit 20 (deadline 4). Tota
 
 Input:  
 deadline = [2, 1, 2, 1, 1]  
-profit = [100, 19, 27, 25, 15]  
+profit   = [100, 19, 27, 25, 15]
 
 Output:  
 [2, 127]
 
 Explanation:  
-Choose job1 (profit 100, d=2) and job3 (profit 27, d=2) → total profit = 127.
+Take job1 (profit 100) and job3 (profit 27) → total = 127.
 
 ---
 
@@ -50,13 +58,13 @@ Choose job1 (profit 100, d=2) and job3 (profit 27, d=2) → total profit = 127.
 
 Input:  
 deadline = [3, 1, 2, 2]  
-profit = [50, 10, 20, 30]  
+profit   = [50, 10, 20, 30]
 
 Output:  
 [3, 100]
 
 Explanation:  
-Choose jobs with profits 50(d=3), 30(d=2), 20(d=2) scheduled appropriately → total = 100.
+Jobs with profits 50, 30, and 20 can be scheduled → total = 100.
 
 ---
 
@@ -65,38 +73,36 @@ Choose jobs with profits 50(d=3), 30(d=2), 20(d=2) scheduled appropriately → t
 * `1 <= deadline.size = profit.size <= 100000`
 * `1 <= deadline[i] <= deadline.size()`
 * `1 <= profit[i] <= 500`
-* Each job takes exactly 1 unit time.
-* Only one job can be scheduled at a time.
-* A job yields profit only if finished by its deadline.
+* Every job takes **exactly 1 unit** of time.
+* Only one job can be executed at any point.
 
 ---
 
 ## Approach & Thought Process:
 
-* **Greedy + Disjoint Set (Union-Find) for slot allocation (Optimal O(n α(n))):**
-  1. Pair each job with its profit and deadline.
-  2. Sort jobs in **descending order of profit**.
-  3. Maintain a Disjoint Set (parent array) representing latest available free slot for each time index.
-  4. For each job (highest profit first), find the latest free slot `s` ≤ `deadline[i]` using `find()`.
-     * If `s > 0` → schedule job at slot `s`, add profit, increment count, and union `s` with `s-1` (mark `s` occupied).
-     * If `s == 0` → no slot available, skip job.
-  5. Continue until all jobs processed.
+* **Greedy Strategy (Sort by Profit):**
+  1. Pair each job as `(deadline, profit)`.
+  2. Sort all jobs by **descending profit**.
+  3. Maintain a `slot[]` array of size = max deadline.
+  4. For each job (highest profit first):
+     * Try to place it at the latest possible free slot ≤ deadline.
+     * If a slot is free → schedule the job.
+  5. Count scheduled jobs and accumulate profit.
 
 * **Why This Works:**
-  * Scheduling higher-profit jobs earlier maximizes total profit.
-  * DSU ensures finding & reserving the latest available slot efficiently.
+  * Picking the highest profit jobs first ensures maximum total profit.
+  * Scheduling them as late as possible keeps earlier slots available.
 
 ---
 
 ## Time & Space Complexity:
 
-* **Time Complexity:** O(n log n) for sorting + O(n α(n)) for union-find operations → approximately **O(n log n)** overall.  
-* **Space Complexity:** O(n) for auxiliary arrays and DSU.
+* **Time Complexity:** O(n log n) for sorting + O(n * maxDeadline) scanning  
+* **Space Complexity:** O(maxDeadline)
 
 ---
 
 ## Solution
 
-See `Solution.java` for the Java implementation (GFG submission version).
-
+See `Solution.java` for the Java implementation used for GFG.
 
