@@ -16,11 +16,9 @@ Your task is to **merge all the k sorted lists into a single sorted linked list*
 
 **Example 1:**
 
-Input:  
-lists = [[1,4,5],[1,3,4],[2,6]]
+Input:  lists = [[1,4,5],[1,3,4],[2,6]]
 
-Output:  
-[1,1,2,3,4,4,5,6]
+Output:  [1,1,2,3,4,4,5,6]
 
 Explanation:  
 Merging all lists in sorted order.
@@ -29,8 +27,7 @@ Merging all lists in sorted order.
 
 **Example 2:**
 
-Input:  
-lists = []
+Input:  lists = []
 
 Output: []
 
@@ -38,8 +35,7 @@ Output: []
 
 **Example 3:**
 
-Input:  
-lists = [[]]
+Input:  lists = [[]]
 
 Output: []
 
