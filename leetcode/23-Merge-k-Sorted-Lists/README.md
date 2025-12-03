@@ -32,8 +32,7 @@ Merging all lists in sorted order.
 Input:  
 lists = []
 
-Output:  
-[]
+Output: []
 
 ---
 
@@ -42,8 +41,7 @@ Output:
 Input:  
 lists = [[]]
 
-Output:  
-[]
+Output: []
 
 ---
 
